@@ -1,0 +1,3 @@
+/* Global styles. Tailwind CSS 4 + daisyUI 5. No tailwind.config.js: configuration lives here. */
+@import 'tailwindcss';
+@plugin "daisyui";

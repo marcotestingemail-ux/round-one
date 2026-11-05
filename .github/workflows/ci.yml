@@ -1,0 +1,36 @@
+# Runs on every pull request (and on main after a merge).
+# Plain English: "does the code still pass its checks and build?"
+# The job name "checks" is what the main-branch ruleset requires.
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Install exact dependency versions
+        run: npm ci
+      - name: Lint (style and accessibility rules)
+        run: npm run lint
+      - name: Unit tests
+        run: npm run test:ci
+      - name: Build
+        run: npm run build:pages

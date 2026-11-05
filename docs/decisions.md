@@ -70,3 +70,10 @@ Start on latest stable at Phase 1: Angular 22.x, Angular Material 22.x, Tailwind
 
 ## 11. GitHub setup
 The friend has his own GitHub account and owns the public repo. Marco is a collaborator. Repo: `marcotestingemail-ux/round-one` (renamed from `roundOne`). Site URL: `https://marcotestingemail-ux.github.io/round-one/`. `main` is protected by a ruleset: PR required (0 approvals), no deletion, no force push. CI status check gets added to the ruleset after its first run. Guide: "Getting set up on GitHub" doc.
+
+## 12. Lessons from Phase 1 (2026-11-05)
+- **GitHub's own servers fail sometimes.** We saw `fatal error in commit_refs_rules` on push and a GraphQL error on `gh pr create`. Each succeeded on one retry, and the PR had in fact been created despite the error. Builder rule: on these errors, check the result first (did the PR or branch get created?), retry once, then show "GitHub is having trouble, not you" and stop. These become the first two entries in the known-failures list.
+- **Workflow files are human-only.** Claude's remote tools can't write into `.github/workflows/`. That matches rule 5 in CLAUDE.md: CI changes are Marco's, done by hand.
+- **The required check is named `checks`** (job in `ci.yml`). Renaming that job breaks the ruleset, so rename both together.
+- **Merged branches auto-delete** on GitHub (owner setting). Local clones use `fetch.prune true`.
+- **Pipeline proven end to end:** branch → PR → required check (46 s) → merge → Pages deploy (about 3.5 min) → live at `/round-one/`.

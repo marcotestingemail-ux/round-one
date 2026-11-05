@@ -19,7 +19,7 @@ Tailwind CSS 4.3, daisyUI 5.7.
 
 | Skill | Source (pinned) | Why limited |
 |---|---|---|
-| `angular-material` | `angular-sanctuary/angular-agent-skills` @ `79c4d81` | Community-generated from the official `angular/components` docs, but generated against **Material v21** (Jan 2026). We're on v22. Only loaded for the allowlisted Material components (see CLAUDE.md). |
+| `angular-material` | `angular-sanctuary/angular-agent-skills` @ `79c4d81` | Community-generated from the official `angular/components` docs, but generated against **Material v21** (Jan 2026). We're on v22. Trimmed on 2026-11-05 to the allowlisted components only (see its SOURCE.md). |
 | `tailwind-css` | `paulrberg/agent-skills` @ `5a1d627` | Good v4 rules, and "don't redesign beyond the request" fits us. But parts assume React tooling (`tailwind-variants`, `cn()`). We copy only `SKILL.md` + `references/tailwind-v4-rules.md`. The Angular skill's `tailwind-css.md` already covers setup. |
 
 ## Use as reference, not installed

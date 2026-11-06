@@ -4,5 +4,5 @@
  */
 export const SITE = {
   name: 'round-one',
-  tagline: 'This site is under construction. Each new piece will be built one step at a time.',
+  tagline: 'Testing new slop',
 } as const;

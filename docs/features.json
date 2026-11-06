@@ -22,6 +22,11 @@
       "files": ["src/app/layout/title-banner/*", "src/app/data/title-banner.ts"]
     },
     {
+      "id": "round-two",
+      "name": "ROUND-TWO sideways scroll effect",
+      "files": ["src/app/shared/round-two/*", "src/app/data/round-two.ts"]
+    },
+    {
       "id": "app-frame",
       "name": "App frame (routes, theme, page shell)",
       "files": ["src/app/app.*", "src/app/app.routes.ts", "src/app/app.config.ts", "src/index.html", "src/main.ts", "src/styles.css"]

@@ -1,12 +1,12 @@
 <header class="bg-primary text-primary-content" data-feature="header">
   <nav aria-label="Main" class="navbar mx-auto max-w-6xl flex-col gap-2 px-4 sm:flex-row sm:justify-between">
-    <a routerLink="/" class="btn btn-ghost text-xl font-semibold tracking-wide">{{ header.brand }}</a>
+    <a routerLink="/" class="btn btn-ghost text-xl font-semibold tracking-wide text-primary-content hover:bg-primary-content/15">{{ header.brand }}</a>
 
     <div class="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
       <ul class="menu menu-horizontal gap-1 p-0">
         @for (link of header.links; track link.path) {
           <li>
-            <a [routerLink]="link.path">{{ link.label }}</a>
+            <a class="text-primary-content hover:bg-primary-content/15 focus-visible:bg-primary-content/15" [routerLink]="link.path">{{ link.label }}</a>
           </li>
         }
       </ul>
@@ -15,7 +15,7 @@
         @for (social of header.socials; track social.label) {
           <li>
             <a
-              class="btn btn-ghost btn-circle"
+              class="btn btn-ghost btn-circle text-primary-content hover:bg-primary-content/15"
               [href]="social.href"
               target="_blank"
               rel="noopener noreferrer"

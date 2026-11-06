@@ -29,6 +29,21 @@
       "files": [
         "src/app/layout/title-banner/*",
         "src/app/data/title-banner.ts"
+      ],
+      "history": [
+        {
+          "date": "2026-11-06",
+          "asked": [
+            "make the hight half of what it is",
+            "try that response again as the builder did not show the buttons",
+            "is still looks small, and no changes were recorded",
+            "this specific section I know I want the height to be half the size of what it is now as it's taking too much space, make that change without asking me any follow up question"
+          ],
+          "answers": [
+            "Should we keep the text centered, or move it to the left like a normal headline? → Keep centered"
+          ],
+          "decisions": "Kept the text centered and the same size, and only reduced the space above and below it."
+        }
       ]
     },
     {

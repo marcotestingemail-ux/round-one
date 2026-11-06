@@ -1,3 +1,30 @@
 /* Global styles. Tailwind CSS 4 + daisyUI 5. No tailwind.config.js: configuration lives here. */
 @import 'tailwindcss';
 @plugin "daisyui";
+
+/* Soft blue and white theme, so components can keep using theme colors like primary. */
+@plugin "daisyui/theme" {
+  name: "bartender";
+  default: true;
+  color-scheme: light;
+  --color-base-100: oklch(99% 0.003 240);
+  --color-base-200: oklch(96% 0.01 240);
+  --color-base-300: oklch(92% 0.015 240);
+  --color-base-content: oklch(28% 0.04 250);
+  --color-primary: oklch(52% 0.12 245);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(45% 0.1 250);
+  --color-secondary-content: oklch(100% 0 0);
+  --color-accent: oklch(70% 0.1 215);
+  --color-accent-content: oklch(20% 0.03 240);
+  --color-neutral: oklch(30% 0.04 250);
+  --color-neutral-content: oklch(100% 0 0);
+  --color-info: oklch(70% 0.13 235);
+  --color-info-content: oklch(20% 0.03 240);
+  --color-success: oklch(70% 0.15 160);
+  --color-success-content: oklch(20% 0.03 160);
+  --color-warning: oklch(80% 0.15 85);
+  --color-warning-content: oklch(25% 0.05 85);
+  --color-error: oklch(58% 0.2 25);
+  --color-error-content: oklch(100% 0 0);
+}

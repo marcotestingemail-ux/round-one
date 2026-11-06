@@ -12,6 +12,16 @@
       "files": ["src/app/pages/home/**"]
     },
     {
+      "id": "header",
+      "name": "Header with links and social icons",
+      "files": ["src/app/layout/header/*", "src/app/data/header.ts"]
+    },
+    {
+      "id": "title-banner",
+      "name": "Main title banner",
+      "files": ["src/app/layout/title-banner/*", "src/app/data/title-banner.ts"]
+    },
+    {
       "id": "app-frame",
       "name": "App frame (routes, theme, page shell)",
       "files": ["src/app/app.*", "src/app/app.routes.ts", "src/app/app.config.ts", "src/index.html", "src/main.ts", "src/styles.css"]

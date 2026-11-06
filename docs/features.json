@@ -4,32 +4,82 @@
     {
       "id": "site-basics",
       "name": "Site name and tagline",
-      "files": ["src/app/data/site.ts"]
+      "files": [
+        "src/app/data/site.ts"
+      ]
     },
     {
       "id": "home-page",
       "name": "Home page",
-      "files": ["src/app/pages/home/**"]
+      "files": [
+        "src/app/pages/home/**"
+      ]
     },
     {
       "id": "header",
       "name": "Header with links and social icons",
-      "files": ["src/app/layout/header/*", "src/app/data/header.ts"]
+      "files": [
+        "src/app/layout/header/*",
+        "src/app/data/header.ts"
+      ]
     },
     {
       "id": "title-banner",
       "name": "Main title banner",
-      "files": ["src/app/layout/title-banner/*", "src/app/data/title-banner.ts"]
+      "files": [
+        "src/app/layout/title-banner/*",
+        "src/app/data/title-banner.ts"
+      ]
     },
     {
       "id": "round-two",
       "name": "ROUND-TWO sideways scroll effect",
-      "files": ["src/app/shared/round-two/*", "src/app/data/round-two.ts"]
+      "files": [
+        "src/app/shared/round-two/*",
+        "src/app/data/round-two.ts"
+      ],
+      "history": [
+        {
+          "date": "2026-11-06",
+          "asked": [
+            "make this height half its current hight"
+          ],
+          "answers": [
+            "Should we keep the same green-to-dark-green color fade, or change the colors to match the new smaller size? → Keep the colors",
+            "Would you like to add a little extra spacing (padding) around the text so it doesn't touch the edges of the screen? → Add padding",
+            "Should we center this section on the screen, or keep it aligned to the left like before? → Centered",
+            "Would you like to add a subtle shadow behind the text so it pops out from the background? → Add shadow"
+          ],
+          "decisions": "Kept the green to dark green fade, added padding, kept it centered, added a shadow."
+        }
+      ]
     },
     {
       "id": "app-frame",
       "name": "App frame (routes, theme, page shell)",
-      "files": ["src/app/app.*", "src/app/app.routes.ts", "src/app/app.config.ts", "src/index.html", "src/main.ts", "src/styles.css"]
+      "files": [
+        "src/app/app.*",
+        "src/app/app.routes.ts",
+        "src/app/app.config.ts",
+        "src/index.html",
+        "src/main.ts",
+        "src/styles.css"
+      ],
+      "history": [
+        {
+          "date": "2026-11-06",
+          "asked": [
+            "make this height half its current hight"
+          ],
+          "answers": [
+            "Should we keep the same green-to-dark-green color fade, or change the colors to match the new smaller size? → Keep the colors",
+            "Would you like to add a little extra spacing (padding) around the text so it doesn't touch the edges of the screen? → Add padding",
+            "Should we center this section on the screen, or keep it aligned to the left like before? → Centered",
+            "Would you like to add a subtle shadow behind the text so it pops out from the background? → Add shadow"
+          ],
+          "decisions": "Kept the green to dark green fade, added padding, kept it centered, added a shadow."
+        }
+      ]
     }
   ]
 }

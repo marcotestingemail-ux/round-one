@@ -66,8 +66,8 @@
  * Only theme colors are used, no raw color values.
  */
 .round-two-track {
-  /* How much scrolling the effect takes: about three screens tall. */
-  height: 300vh;
+  /* How much scrolling the effect takes: about one and a half screens tall (half of before). */
+  height: 150vh;
 }
 
 .round-two-stage {
@@ -86,6 +86,8 @@
     var(--color-base-content),
     var(--color-secondary-content) calc(clamp(0, (var(--progress, 0) - 0.35) * 5, 1) * 100%)
   );
+  /* A soft shadow behind the words, made from the theme's dark color so it stays on theme. */
+  text-shadow: 0 0.04em 0.18em color-mix(in oklab, var(--color-neutral) 45%, transparent);
 }
 
 /* For people who ask their device for less motion: no pinning, just the finished look. */

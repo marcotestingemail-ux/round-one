@@ -47,7 +47,7 @@ together with a theme bridge (`src/material-bridge.css`) so Material matches the
    - **Where**: the files, and what each one is for
    - **Why**: the reason for any choice they didn't make themselves
    - **Try it**: what to click in the playground to check it works
-4. The commit message explains *why*, in plain English (e.g. `Add navbar so visitors can reach every page`).
+4. The commit message follows the format in section 7, so the history explains itself.
 
 ## 5. When things go wrong
 - If the same error survives **2 fix attempts**, stop. Don't try a third time. Tell the user it needs Marco and prepare the "Send to Marco" report.
@@ -61,3 +61,27 @@ together with a theme bridge (`src/material-bridge.css`) so Material matches the
 - At most 5 findings, most important first. For each: what's wrong, why it matters (one sentence a beginner understands), suggested fix.
 - Check: rules above followed, build/tests pass, accessibility basics (alt text, labels, contrast, keyboard use), mobile layout, no hard-coded content that belongs in `data/`.
 - Never approve or merge. The user decides.
+
+## 7. Tracking features (so they can be found and brought back later)
+Every feature has an id (lowercase-with-dashes, e.g. `testimonials`), and three things point to it:
+1. **`docs/features.json`** lists each feature with its name and files (`*` = inside one folder, `**` = any depth).
+   Add the entry in the same commit that creates the feature. Update it when files move. Remove it when the feature is deleted.
+2. **`data-feature="<id>"`** goes on the outermost element of the feature's component template, so it can be picked by clicking it in the playground.
+3. **Commit messages** use this format. The Builder writes it; follow it by hand too:
+   ```
+   Add a testimonials section to the home page      <- title: one line, starts with a verb, under 72 characters
+
+   What: Three customer quotes in cards under the hero.
+   Why: Visitors should see that real people like the coffee.
+   Decisions: Cards instead of a slider (easier to read on phones).
+
+   Feature: testimonials                              <- one line per feature touched
+   Change: add                                        <- add, edit, remove or restore
+   Files: src/app/pages/home/testimonials/..., src/app/data/testimonials.ts
+   Made-with: Builder
+   ```
+   `What` is required; `Why` and `Decisions` only when there is a real reason or choice to record. Never invent a reason.
+   The last block (labels, called *trailers*) must stay together with no blank lines, so `git log` can search it:
+   `git log --grep="Feature: testimonials"` lists the whole history of one feature.
+- One feature per checkpoint where possible. A checkpoint that mixes unrelated features is harder to bring back.
+- Don't put a feature's files in another feature's folder. If two features share a piece, it goes in `src/app/shared/` with its own entry.

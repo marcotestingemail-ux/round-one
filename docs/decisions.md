@@ -77,3 +77,9 @@ The friend has his own GitHub account and owns the public repo. Marco is a colla
 - **The required check is named `checks`** (job in `ci.yml`). Renaming that job breaks the ruleset, so rename both together.
 - **Merged branches auto-delete** on GitHub (owner setting). Local clones use `fetch.prune true`.
 - **Pipeline proven end to end:** branch → PR → required check (46 s) → merge → Pages deploy (about 3.5 min) → live at `/round-one/`.
+
+## 13. Feature tracking and rich commit messages (2026-11-05)
+**Chose:** every feature is listed in `docs/features.json` (id, name, files), its root element carries `data-feature="<id>"`, and every commit has a title, a `What`/`Why`/`Decisions` paragraph and searchable labels (`Feature`, `Change`, `Files`, `Made-with`). The Builder fills the labels from the actual changed files and `features.json`, so they're facts, not AI guesses. The free local model drafts the title and `What`; the user edits them. `Why` and `Decisions` come from the user (later also from the component interview).
+**Why:** when the site has many features, the user will want to find "when did the testimonials change?" or bring an old feature back. That needs a reliable link between features, files and commits. Adding it now is cheap; reconstructing it later for a big site isn't.
+**Not git notes:** GitHub doesn't show them and they're easy to lose. Plain commit messages are permanent and visible everywhere.
+**Revisit if:** features.json drifts from the real files often. Then the Builder checks it in CI.

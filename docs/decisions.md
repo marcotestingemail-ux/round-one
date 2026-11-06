@@ -83,3 +83,13 @@ The friend has his own GitHub account and owns the public repo. Marco is a colla
 **Why:** when the site has many features, the user will want to find "when did the testimonials change?" or bring an old feature back. That needs a reliable link between features, files and commits. Adding it now is cheap; reconstructing it later for a big site isn't.
 **Not git notes:** GitHub doesn't show them and they're easy to lose. Plain commit messages are permanent and visible everywhere.
 **Revisit if:** features.json drifts from the real files often. Then the Builder checks it in CI.
+
+## 14. How Claude builds (2026-11-06)
+**Chose:** the free local model interviews the user (plain-language options with hints, plus "Not sure, show me"). When the plan is ready, the user presses **Build it** (with a cost estimate). Claude gets the project rules, `docs/features.json`, the file map and the code, and answers with whole files. The Builder:
+- only lets it write under `src/` and `docs/features.json` (at most 25 files, 80 KB each), never workflows, packages or config;
+- puts the files in, then runs the site's own `ng build` and `ng lint` (the same checks as CI);
+- on a failure gives Claude **at most 2 fix tries**; after that it puts every file back and says it needs Marco (decision #7);
+- shows the result in the playground with **Keep** or **Undo** (and an A/B switch when two versions were asked for). Nothing is committed until the user keeps it and saves a checkpoint, with Claude's description filled in.
+**Why:** the user sees and tries the real thing before anything is saved, the site is never left half-built, and a failure can't turn into an endless (paid) loop.
+**Cost:** Claude Sonnet 5.5; a build is usually a few cents. Two limits: the spend limit in the Anthropic Console, and the Builder's own monthly budget.
+**Revisit if:** builds often need the 2 fixes (better context or rules), or the site grows past what fits in Claude's context (send only the relevant features).

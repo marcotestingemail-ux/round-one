@@ -16,7 +16,7 @@ For any new UI piece (navbar, hero, footer, form, page):
 
 ## 2. Structure
 - One component = one job. A navbar is its own component. Its links come from an input or a small data file, not hard-coded across pages.
-- Generate with the Angular CLI (`ng generate component ...`), never by hand-creating files.
+- Name and lay out files exactly as the Angular CLI would (`ng generate component navbar` → `navbar/navbar.ts`, `navbar.html`, `navbar.spec.ts`; class `Navbar`, selector `app-navbar`). The Builder writes files directly, so they must look CLI-made.
 - Folders:
   - `src/app/layout/`: pieces used on every page (navbar, footer)
   - `src/app/pages/<page>/`: one folder per route

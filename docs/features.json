@@ -1,0 +1,20 @@
+{
+  "about": "Every feature of the site and the files it is made of. The Builder reads this to label checkpoints (Feature: ...) and to bring old features back. Keep it up to date: add a feature when you build one, and remove it when the feature is deleted. Patterns: * matches inside one folder, ** matches any depth.",
+  "features": [
+    {
+      "id": "site-basics",
+      "name": "Site name and tagline",
+      "files": ["src/app/data/site.ts"]
+    },
+    {
+      "id": "home-page",
+      "name": "Home page",
+      "files": ["src/app/pages/home/**"]
+    },
+    {
+      "id": "app-frame",
+      "name": "App frame (routes, theme, page shell)",
+      "files": ["src/app/app.*", "src/app/app.routes.ts", "src/app/app.config.ts", "src/index.html", "src/main.ts", "src/styles.css"]
+    }
+  ]
+}

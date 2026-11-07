@@ -21,6 +21,22 @@
       "files": [
         "src/app/layout/header/*",
         "src/app/data/header.ts"
+      ],
+      "history": [
+        {
+          "date": "2026-11-06",
+          "asked": [
+            "Lets take a closer look at this navbar, it's super off, The words are black and with a black background I cant see anything. Based on our color scheme can we switch it upso we can see the title. The same issue applies to the icons",
+            "make the rest of the font green, along with the icons too",
+            "match what we have",
+            "dont worry about anything just change the color",
+            "keep everything as is just make the change"
+          ],
+          "answers": [
+            "How should the navigation links be arranged on mobile screens? → Stacked vertically in a column"
+          ],
+          "decisions": "Used the exact lime from the theme, and kept the layout and spacing as they were."
+        }
       ]
     },
     {

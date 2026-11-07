@@ -59,14 +59,15 @@
 }
 
 /*
- * ROUND-TWO scroll effect (src/app/shared/round-two).
+ * ROUND-ONE to ROUND-TWO scroll effect (src/app/shared/round-two).
  * Custom CSS is needed here because Tailwind has no class for "follow the scroll position".
  * The component sets --progress (0 to 1) while you scroll, and these rules use it:
- * the green fades to dark green, the text slides in from the left and fades in.
+ * the green fades to dark green, the ROUND-ONE words fade away in the middle,
+ * and the ROUND-TWO words fade in from the middle.
  * Only theme colors are used, no raw color values.
  */
 .round-two-track {
-  /* How much scrolling the effect takes: about one and a half screens tall (half of before). */
+  /* How much scrolling the effect takes: about one and a half screens tall. */
   height: 150vh;
 }
 
@@ -78,13 +79,19 @@
   );
 }
 
+/* The ROUND-ONE words: fully visible at first, gone before the middle of the scroll. */
+.round-two-intro {
+  opacity: clamp(0, calc(1 - var(--progress, 0) * 2.5), 1);
+}
+
+/* The ROUND-TWO words: fade in at the center and grow a little to full size. */
 .round-two-text {
-  transform: translateX(calc((1 - var(--progress, 0)) * -100vw));
-  opacity: clamp(0, calc((var(--progress, 0) - 0.1) * 2), 1);
+  opacity: clamp(0, calc((var(--progress, 0) - 0.4) * 3), 1);
+  transform: scale(calc(0.9 + 0.1 * clamp(0, calc((var(--progress, 0) - 0.4) * 3), 1)));
   color: color-mix(
     in oklab,
     var(--color-base-content),
-    var(--color-secondary-content) calc(clamp(0, (var(--progress, 0) - 0.35) * 5, 1) * 100%)
+    var(--color-secondary-content) calc(clamp(0, (var(--progress, 0) - 0.3) * 5, 1) * 100%)
   );
   /* A soft shadow behind the words, made from the theme's dark color so it stays on theme. */
   text-shadow: 0 0.04em 0.18em color-mix(in oklab, var(--color-neutral) 45%, transparent);

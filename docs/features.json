@@ -13,6 +13,18 @@
       "name": "Home page",
       "files": [
         "src/app/pages/home/**"
+      ],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "asked": [
+            "on this section there is an effect that bring in Round 2, can you see it?",
+            "so instead of hav e it in that section, can you bring up the affect of round two to the section of round one?",
+            "fade in from the middle"
+          ],
+          "answers": [],
+          "decisions": "Fade in from the middle (no sideways slide). Kept the green to dark-green fade, padding, centering and shadow."
+        }
       ]
     },
     {
@@ -82,6 +94,16 @@
             "Would you like to add a subtle shadow behind the text so it pops out from the background? → Add shadow"
           ],
           "decisions": "Kept the green to dark green fade, added padding, kept it centered, added a shadow."
+        },
+        {
+          "date": "2026-11-07",
+          "asked": [
+            "on this section there is an effect that bring in Round 2, can you see it?",
+            "so instead of hav e it in that section, can you bring up the affect of round two to the section of round one?",
+            "fade in from the middle"
+          ],
+          "answers": [],
+          "decisions": "Fade in from the middle (no sideways slide). Kept the green to dark-green fade, padding, centering and shadow."
         }
       ]
     },
@@ -109,6 +131,16 @@
             "Would you like to add a subtle shadow behind the text so it pops out from the background? → Add shadow"
           ],
           "decisions": "Kept the green to dark green fade, added padding, kept it centered, added a shadow."
+        },
+        {
+          "date": "2026-11-07",
+          "asked": [
+            "on this section there is an effect that bring in Round 2, can you see it?",
+            "so instead of hav e it in that section, can you bring up the affect of round two to the section of round one?",
+            "fade in from the middle"
+          ],
+          "answers": [],
+          "decisions": "Fade in from the middle (no sideways slide). Kept the green to dark-green fade, padding, centering and shadow."
         }
       ]
     }

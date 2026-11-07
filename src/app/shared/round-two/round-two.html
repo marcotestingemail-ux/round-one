@@ -1,6 +1,10 @@
-<section class="round-two-track" data-feature="round-two" aria-label="Round two">
-  <div class="round-two-stage sticky top-0 flex h-dvh items-center justify-center overflow-hidden">
-    <div class="round-two-text mx-auto w-full max-w-5xl px-8 py-16 text-center sm:px-16 sm:py-24">
+<section class="round-two-track" data-feature="round-two" aria-label="Round one and round two">
+  <div class="round-two-stage sticky top-0 grid h-dvh place-items-center overflow-hidden">
+    <div class="round-two-intro col-start-1 row-start-1 mx-auto w-full px-8 text-center">
+      <ng-content select="[round-one]" />
+    </div>
+
+    <div class="round-two-text col-start-1 row-start-1 mx-auto w-full max-w-5xl px-8 py-16 text-center sm:px-16 sm:py-24">
       <h2 class="text-6xl font-bold tracking-wide sm:text-8xl lg:text-9xl">{{ content.title }}</h2>
       <p class="mt-4 text-xl uppercase tracking-widest sm:text-2xl lg:text-3xl">{{ content.subtitle }}</p>
     </div>

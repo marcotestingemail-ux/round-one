@@ -48,6 +48,18 @@
             "How should the navigation links be arranged on mobile screens? → Stacked vertically in a column"
           ],
           "decisions": "Used the exact lime from the theme, and kept the layout and spacing as they were."
+        },
+        {
+          "date": "2026-11-20",
+          "asked": [
+            "lets work on the nav bar",
+            "I feel like there is no clear distinction between the nav bar and the section contains the \"THE ART OF MIXOLOGY\". can you maybe add a line that allows me to differentiate both of them",
+            "I feel like there is no clear distinction between the nav bar and the section contains the \"THE ART OF MIXOLOGY\". can you maybe add a line that allows me to differentiate both of them",
+            "I feel like there is no clear distinction between the nav bar and the section contains the \"THE ART OF MIXOLOGY\". can you maybe add a line that allows me to differentiate both of them"
+          ],
+          "answers": [],
+          "decisions": "Used the theme's lime color and changed nothing else in the header.",
+          "version": "A: Thin lime line"
         }
       ]
     },

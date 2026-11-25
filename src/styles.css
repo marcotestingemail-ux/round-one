@@ -38,42 +38,6 @@
   --noise: 0;
 }
 
-/* Dark mode: a deep olive-black page with lime text. The header and banner stay dark with lime text. */
-@plugin "daisyui/theme" {
-  name: "round-one-dark";
-  default: false;
-  prefersdark: false;
-  color-scheme: dark;
-  --color-base-100: oklch(20% 0.03 125);
-  --color-base-200: oklch(25% 0.045 125);
-  --color-base-300: oklch(30% 0.05 125);
-  --color-base-content: oklch(94% 0.23 123);
-  --color-primary: oklch(12% 0.01 120);
-  --color-primary-content: oklch(94% 0.23 123);
-  --color-secondary: oklch(38% 0.09 125);
-  --color-secondary-content: oklch(96% 0.15 123);
-  --color-accent: oklch(100% 0 0);
-  --color-accent-content: oklch(22% 0.01 120);
-  --color-neutral: oklch(12% 0.01 120);
-  --color-neutral-content: oklch(94% 0.23 123);
-  --color-info: oklch(75% 0.12 235);
-  --color-info-content: oklch(20% 0.03 240);
-  --color-success: oklch(65% 0.17 150);
-  --color-success-content: oklch(15% 0.03 150);
-  --color-warning: oklch(85% 0.17 85);
-  --color-warning-content: oklch(25% 0.05 85);
-  --color-error: oklch(55% 0.22 27);
-  --color-error-content: oklch(100% 0 0);
-  --radius-selector: 0rem;
-  --radius-field: 0.125rem;
-  --radius-box: 0.25rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 2px;
-  --depth: 0;
-  --noise: 0;
-}
-
 /* The theme's font, used everywhere. */
 @theme {
   --font-sans: 'Barlow Condensed', ui-sans-serif, system-ui, sans-serif;

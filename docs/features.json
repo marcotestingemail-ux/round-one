@@ -69,6 +69,14 @@
           ],
           "answers": [],
           "decisions": "Dark mode and light mode icon placed next to the Facebook icon (the X/Twitter icon was dropped). The header keeps its lime text and lime line."
+        },
+        {
+          "date": "2026-11-25",
+          "asked": [
+            "lets remove the darkmode functionality"
+          ],
+          "answers": [],
+          "decisions": "Removed the dark theme and the theme-toggle component entirely. Kept the header's lime text, lime line and social icons."
         }
       ]
     },
@@ -171,25 +179,14 @@
           ],
           "answers": [],
           "decisions": "Dark mode and light mode icon placed next to the Facebook icon (the X/Twitter icon was dropped). The header keeps its lime text and lime line."
-        }
-      ]
-    },
-    {
-      "id": "theme-toggle",
-      "name": "Light and dark mode button",
-      "files": [
-        "src/app/shared/theme-toggle/*",
-        "src/app/data/theme-toggle.ts"
-      ],
-      "history": [
+        },
         {
-          "date": "2026-11-20",
+          "date": "2026-11-25",
           "asked": [
-            "I want to add a new icon next to the facebook icon, lets add an x for twitter",
-            "okay nevermind, lets add a dark mode and light mode icon next to the facebook icon"
+            "lets remove the darkmode functionality"
           ],
           "answers": [],
-          "decisions": "Dark mode and light mode icon placed next to the Facebook icon (the X/Twitter icon was dropped). The header keeps its lime text and lime line."
+          "decisions": "Removed the dark theme and the theme-toggle component entirely. Kept the header's lime text, lime line and social icons."
         }
       ]
     }
